@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 gem 'bootsnap', require: false
+gem "font-awesome-sass", "~> 6.5.1"
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
@@ -25,4 +26,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 gem 'bootstrap', '~> 5.3.0'
+gem 'sassc-rails', '>= 2.0.0'
+
 gem 'webpacker', '~> 5.4'
+gem 'simple_form'
