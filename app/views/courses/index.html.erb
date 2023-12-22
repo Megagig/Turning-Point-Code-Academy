@@ -3,12 +3,24 @@
 <h1>Courses</h1>
 
 <div id="courses">
-  <% @courses.each do |course| %>
-    <%= render course %>
-    <p>
-      <%= link_to "Show this course", course %>
-    </p>
-  <% end %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td><%= render course %></td>
+          <td>
+            <%= link_to "Show this course", course %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New course", new_course_path %>
