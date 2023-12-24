@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Turning Point Code Academy</a>
+  <a class="navbar-brand" href="/">Turning Point Code Academy</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -17,6 +17,13 @@
           <%= link_to courses_path, class: 'nav-link' do %>
             <i class="fa fa-book"></i>
             Courses
+            <li class="nav-item <%= 'active font-weight-bold' if current_page?(new_course_path) %>">
+  <%= link_to new_course_path, class: 'nav-link' do %>
+    <span class="fa fa-plus"></span>
+    New Course
+  <% end %>
+</li>
+
           <% end %>
         </li>
       </ul>

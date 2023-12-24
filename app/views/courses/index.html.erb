@@ -1,35 +1,9 @@
-<p style="color: green"><%= notice %></p>
+Courses:
+<%= @courses.count %>
 
-<h1>Courses</h1>
-
-<div id="courses">
-  <table class="table">
-    <thead>
-      <tr>
-        <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-      </tr>
-    </thead>
-    <tbody>
-      <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.title %></td>
-        <td><%= course.description %></td>
-        <td><%= course.user %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
+<div class="card-columns">
+  <% @courses.each do |course| %>
+    <%= render 'courses/course', course: course %>
+  <% end %>
 </div>
-
 <br>
-<%= link_to "New course", new_course_path %>

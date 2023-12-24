@@ -1,20 +1,5 @@
-<p style="color: green"><%= notice %></p>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Course Details</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= render @course %></td>
-      <td>
-        <%= link_to "Edit this course", edit_course_path(@course) %> |
-        <%= link_to "Back to courses", courses_path %> |
-        <%= button_to "Destroy this course", @course, method: :delete %>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<%= link_to 'Courses', courses_path %> /
+<%= link_to @course.title, course_path(@course) %>
+<p>
+  <%= render 'courses/course', course: @course %>
+</p>
