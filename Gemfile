@@ -28,9 +28,8 @@ end
 gem 'bootstrap', '~> 5.3.0'
 gem 'sassc-rails', '>= 2.0.0'
 
-gem 'simple_form'
 gem 'faker'
+gem 'simple_form'
 # Gemfile
 
 gem 'devise'
-
