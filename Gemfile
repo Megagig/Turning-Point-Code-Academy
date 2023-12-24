@@ -29,4 +29,4 @@ gem 'bootstrap', '~> 5.3.0'
 gem 'sassc-rails', '>= 2.0.0'
 
 gem 'simple_form'
-gem 'webpacker', '~> 5.4'
+gem 'faker'
