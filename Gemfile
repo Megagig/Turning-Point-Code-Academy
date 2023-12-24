@@ -30,3 +30,7 @@ gem 'sassc-rails', '>= 2.0.0'
 
 gem 'simple_form'
 gem 'faker'
+# Gemfile
+
+gem 'devise'
+
