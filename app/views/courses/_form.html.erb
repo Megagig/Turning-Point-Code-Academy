@@ -6,6 +6,11 @@
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :description %>
+    <small class="text-danger"><%= f.error :description %></small>
+<%= f.input :language, collection: ["English", "Polish", "Russian"] %>
+<%= f.input :level, collection: ["Beginner", "Intermediate", "Advanced"] %>
+<%= f.input :price %>
+
   </div>
 
   <div class="form-actions">
