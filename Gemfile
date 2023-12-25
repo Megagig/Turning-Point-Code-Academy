@@ -34,3 +34,4 @@ gem 'simple_form'
 
 gem 'devise'
 gem 'friendly_id', '~> 5.4.0'
+gem 'ransack'
