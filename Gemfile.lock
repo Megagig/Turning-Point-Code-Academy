@@ -120,8 +120,6 @@ GEM
       i18n (>= 1.8.11, < 2)
     ffi (1.16.3)
     ffi (1.16.3-x64-mingw-ucrt)
-    font-awesome-sass (6.5.1)
-      sassc (~> 2.0)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
     globalid (1.2.1)
@@ -315,7 +313,6 @@ DEPENDENCIES
   debug
   devise
   faker
-  font-awesome-sass (~> 6.5.1)
   friendly_id (~> 5.4.0)
   importmap-rails
   jbuilder

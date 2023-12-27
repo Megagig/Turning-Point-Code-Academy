@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 gem 'bootsnap', require: false
-gem 'font-awesome-sass', '~> 6.5.1'
+# gem 'font-awesome-sass', '~> 6.5.1'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
