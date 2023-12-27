@@ -4,6 +4,12 @@ Courses:
 <div class="row">
   <div class="col-md-2">
     <%= search_form_for @q do |f| %>
+      <!-- Your search form content for @q -->
+    <% end %>
+
+    <%= search_form_for @ransack_courses, as: :courses_search, url: courses_path do |f| %>
+      <!-- Your search form content for @ransack_courses -->
+      
       <%= f.label :title %>
       <%= f.search_field :title_cont, placeholder: 'Title', class: 'form-control form-control-sm' %>
 
