@@ -3,6 +3,10 @@ class HomeController < ApplicationController
 
   def index
     @courses = Course.all.limit(3)
-    @latest_couses = Course.all.limit(3).order(created_at: :desc)
+    @latest_courses = Course.all.limit(3).order(created_at: :desc)
+
+    # Placeholder logic for popular, top-rated, and latest courses
+    @popular_courses = Course.all.limit(3) # Replace with your actual logic for popular courses
+    @top_rated_courses = Course.all.limit(3) # Replace with your actual logic for top-rated courses
   end
 end
