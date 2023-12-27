@@ -8,7 +8,11 @@
     <%= f.input :description %>
     <small class="text-danger"><%= f.error :description %></small>
 <%= f.input :language, collection: ["English", "Polish", "Russian"] %>
+<%= f.input :language, collection: Course.languages, include_blank: true %>
+
 <%= f.input :level, collection: ["Beginner", "Intermediate", "Advanced"] %>
+<%= f.input :level, collection: Course.levels, include_blank: true %>
+
 <%= f.input :price %>
 
   </div>
