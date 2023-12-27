@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 gem 'bootsnap', require: false
-gem "font-awesome-sass", "~> 6.5.1"
+gem 'font-awesome-sass', '~> 6.5.1'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
@@ -28,5 +28,10 @@ end
 gem 'bootstrap', '~> 5.3.0'
 gem 'sassc-rails', '>= 2.0.0'
 
-gem 'webpacker', '~> 5.4'
+gem 'faker'
 gem 'simple_form'
+# Gemfile
+
+gem 'devise'
+gem 'friendly_id', '~> 5.4.0'
+gem 'ransack'

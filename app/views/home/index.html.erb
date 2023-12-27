@@ -1,38 +1,90 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+<div class="jumbotron">
+  <h1 class="display-4">What do you want to learn today?</h1>
+  <div class="p-4">
+    <% if current_user %>
+      <%= search_form_for @ransack_courses, as: :courses_search, url: courses_path do |f| %>
+        <div class="input-group">
+          <%= f.search_field :title_cont, class: 'form-control-sm', style: 'float: left; width: 150px;', placeholder: 'Find a course', autocomplete: :off %>
+          <span class="input-group-append">
+            <button class="btn btn-primary btn-sm" type="submit">
+              <span class="fa fa-search" aria-hidden="true"></span>
+            </button>
+          </span>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+      <% end %>
+    <% end %>
+
+    <div class="card-group">
+      <div class="card card-body">
+        <h1><span class="fa fa-graduation-cap"></span></h1>
+        <%= Course.count %> online courses
+        <div class="row">
+          Explore a variety of fresh topics
+        </div>
+      </div>
+      <div class="card card-body">
+        <h1><span class="fa fa-chalkboard-teacher"></span></h1>
+        <%= Course.distinct.count(:user_id) %> expert instructors
+        <div class="row">
+          Find the right instructor for you
+        </div>
+      </div>
+      <div class="card card-body">
+        <h1><span class="fa fa-user-graduate"></span></h1>
+        <%= User.count %> active learners
+        <div class="row">
+          Join the knowledge sharing community
+        </div>
+      </div>
+      <div class="card card-body">
+        <h1><span class="fa fa-infinity"></span></h1>
+        Lifetime access
+        <div class="row">
+          Learn on your schedule
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>Popular courses</h2>
+<div class="card-columns">
+  <% if @popular_courses.present? %>
+    <% @popular_courses.each do |course| %>
+      <%= render 'courses/course', course: course %>
+    <% end %>
+  <% else %>
+    <p>No popular courses available.</p>
+  <% end %>
+</div>
+
+<hr>
+
+<h2>Top rated courses</h2>
+<div class="card-columns">
+  <% if @top_rated_courses.present? %>
+    <% @top_rated_courses.each do |course| %>
+      <%= render 'courses/course', course: course %>
+    <% end %>
+  <% else %>
+    <p>No top-rated courses available.</p>
+  <% end %>
+</div>
+
+<!-- here comes the rest of your code for latest courses -->
+    <hr>
+
+    <h2>Latest courses</h2>
+    <div class="card-columns">
+      <% if @latest_courses.present? %>
+        <% @latest_courses.each do |course| %>
+          <%= render 'courses/course', course: course %>
+        <% end %>
+      <% else %>
+        <p>No latest courses available.</p>
+      <% end %>
+    </div>
+
+    <hr>
   </div>
-</nav>
-<i class="fa fa-car"></i>
-<i class="fa fa-car" style="font-size:48px;"></i>
-<i class="fa fa-car" style="font-size:60px;color:red;"></i>
+</div>

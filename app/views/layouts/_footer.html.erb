@@ -1,0 +1,30 @@
+<hr>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        Copyright
+        © 
+        <%= Time.now.year %>
+        CoursePlatform Sp. z o.o.
+        <div class="row">
+          <i class="fa fa-envelope"></i>
+          <%= mail_to 'turningpointcodes@gmail.com' %>
+        </div>
+      </div>
+      <div class="col-md-4">
+        Privacy policy
+        <div class="row">
+          Terms and conditions
+        </div>
+      </div>
+      <div class="col-md-4">
+        About us
+        <div class="row">
+          <%= link_to 'Teach on CoursePlatform', new_course_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<br>

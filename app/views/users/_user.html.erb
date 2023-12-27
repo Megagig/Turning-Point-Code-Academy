@@ -1,0 +1,19 @@
+<%= time_ago_in_words(user.created_at) %> ago
+<div class="card-footer">
+  <strong><%= 'sign_in_count'.humanize %>:</strong>
+  <%= user.sign_in_count %>
+  <div class="row"></div>
+  <strong><%= 'current_sign_in_at'.humanize %>:</strong>
+  <%= user.current_sign_in_at %>
+  <div class="row"></div>
+  <strong><%= 'last_sign_in_at'.humanize %>:</strong>
+  <%= user.last_sign_in_at %>
+  <div class="row"></div>
+  <strong><%= 'current_sign_in_ip'.humanize %>:</strong>
+  <%= user.current_sign_in_ip %>
+  <div class="row"></div>
+  <%= user.last_sign_in_ip %>
+</div>
+<div class="card-footer">
+  Confirmed email?
+</div>
