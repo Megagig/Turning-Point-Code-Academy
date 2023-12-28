@@ -2,14 +2,14 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 gem 'bootsnap', require: false
-# gem 'font-awesome-sass', '~> 6.5.1'
+gem 'font-awesome-sass', '~> 6.5.1'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
 gem 'puma', '>= 5.0'
 gem 'rails', '~> 7.1.2'
 gem 'rubocop', '>= 1.0', '< 2.0'
-# gem 'sprockets-rails'
+gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
@@ -26,7 +26,6 @@ group :test do
   gem 'selenium-webdriver'
 end
 gem 'bootstrap', '~> 5.3.0'
-# gem 'sassc-rails', '>= 2.0.0'
 
 gem 'faker'
 gem 'simple_form'
@@ -37,3 +36,5 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'ransack'
 
 gem 'nokogiri'
+gem 'sassc-rails'
+# gem 'dartsass-sprockets'
