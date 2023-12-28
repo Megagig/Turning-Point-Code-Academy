@@ -35,7 +35,5 @@ gem 'simple_form'
 gem 'devise'
 gem 'friendly_id', '~> 5.4.0'
 gem 'ransack'
-gem 'sprockets-rails', '3.4.2'
-gem 'nokogiri', '1.15.5'
 
-
+gem 'nokogiri'

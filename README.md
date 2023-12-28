@@ -55,7 +55,9 @@
 - **A registration page.**
 - **A Course List**
 - **A Tag list**
+- **A User list**
 - **A general Course view**
+- **A New Course view**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
