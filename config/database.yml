@@ -17,6 +17,4 @@ test:
   host: localhost
 production:
   <<: *default
-  database: turning_point_code_academy_production
-  username: turning_point_code_academy
-  password: <%= ENV["TURNING_POINT_CODE_ACADEMY_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
